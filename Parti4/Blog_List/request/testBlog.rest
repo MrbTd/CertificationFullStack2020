@@ -1,0 +1,26 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBlcmUiLCJpZCI6IjYwMTNkYTQ5M2FmMzUxMWMyNGFkZGU4OSIsImlhdCI6MTYxMjAxODQ2OH0.h-hSok8GkATkjV9a6lVxcME_ODo1tDZ_lk3Zam0xHFk
+
+{
+    "title":"Le Fils du Voisin",
+    "author":"ben zepekegno",
+    "url":"http://blackover.com",
+    "likes":9
+}
+
+###
+PUT http://localhost:3003/api/blogs/60157387ed317c48a2a29589
+Content-Type: application/json
+
+{
+    "title":"La Voiture du Chat",
+    "author":"ben zepekegno",
+    "url":"http://blackover.com",
+    "likes":9
+}
+
+###
+DELETE http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBlcmUiLCJpZCI6IjYwMTNkYTQ5M2FmMzUxMWMyNGFkZGU4OSIsImlhdCI6MTYxMjAxOTczM30.hl2zTXT6zqTdsbr_T4ESugEqn6_HFKlIMHsU5r2nEpw

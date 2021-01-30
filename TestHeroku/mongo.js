@@ -12,29 +12,38 @@ const url =
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
 
 const noteSchema = new mongoose.Schema({
-  content: String,
+  content: {
+    type: String,
+    required: true,
+    minlength: 5
+  },
   date: Date,
   important: Boolean,
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  }
 })
 
 const Note = mongoose.model('Note', noteSchema)
 
 const note = new Note({
-  content: 'Callback-functions suck',
+  content: process.argv[3],
   date: new Date(),
   important: true,
+  
 })
 
-/*
+
 note.save().then(response => {
   console.log('note saved!');
   mongoose.connection.close();
 })
-*/
 
+/*
 Note.find({}).then(result => {
   result.forEach(note => {
     console.log(note)
   })
   mongoose.connection.close()
-})
+})*/

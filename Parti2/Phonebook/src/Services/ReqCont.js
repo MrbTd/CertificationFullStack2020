@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from "axios";
 
-const urlBase='http://localhost:3001/persons'
+const urlBase='/api/persons'
 
 const getAll=()=>{
     const promis=axios.get(urlBase)
