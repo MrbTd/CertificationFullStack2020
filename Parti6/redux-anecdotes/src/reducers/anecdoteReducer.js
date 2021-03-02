@@ -48,11 +48,7 @@ export const votage = (id) =>{
 }
 
 export const handleInit = (data) =>
-{/*
-  return{
-    type:'INIT',
-    data
-  }*/
+{
 return async dispatch =>{
   const response= await serviceAnec.getAll()
   dispatch({
